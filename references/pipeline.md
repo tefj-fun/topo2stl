@@ -21,6 +21,7 @@ Requirements and interfaces
 
 - Interface source and revision
 - Coordinate system and print orientation
+- User-confirmed load table covering payload mass, center of gravity, forces, moments, directions, application regions, restraints, dynamic/shock cases, and load multipliers
 - Protected attachment regions
 - Mandatory holes, counterbores, insert bores, and assembly clearances
 - Load and restraint node counts

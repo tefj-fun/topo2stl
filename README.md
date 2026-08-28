@@ -5,6 +5,7 @@ A reusable Codex skill for taking topology-optimized FDM structural parts from d
 ## What it enforces
 
 - Real attachment loads and protected interfaces before optimization
+- Explicit user confirmation of payload, center of gravity, restraints, forces, moments, and dynamic load cases
 - Optional mirrored-element symmetry during BESO
 - Controlled smoothing with exact interface restoration
 - Watertightness, connectivity, fit, tooling, and symmetry audits

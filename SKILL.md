@@ -19,6 +19,18 @@ Resolve these before optimization:
 
 Do not infer missing physical interfaces from an optimized mesh. Stop for user direction when a missing choice would change the mechanism or load path.
 
+## Confirm the loading
+
+Before running BESO or FEA, obtain the following from project evidence or ask the user to confirm it:
+
+- payload mass and center of gravity relative to the mount;
+- exact restrained interfaces and load-application regions;
+- force direction, torque arm, and whether gravity acts in more than one orientation;
+- static, acceleration, braking, vibration, shock, cable-pull, and handling load cases that apply;
+- load multipliers or required safety factor and the failure condition being protected against.
+
+Show the resulting load table to the user before solving. Do not substitute an assumed point load at a convenient node. If a required value is unknown, label a proposed conservative assumption and wait for confirmation rather than treating it as measured input.
+
 ## Required gates
 
 1. Build and audit the full-density design domain.
