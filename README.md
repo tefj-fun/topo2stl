@@ -1,5 +1,9 @@
 # Topo2STL
 
+<p align="center">
+  <img src="assets/topo2stl.svg" alt="Topo2STL topology load-path icon" width="180">
+</p>
+
 A reusable Codex skill for taking topology-optimized FDM structural parts from design-domain definition through BESO, printable reconstruction, independent FEA, slicing, and release evidence.
 
 ## Example visual evidence
