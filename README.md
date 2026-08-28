@@ -1,4 +1,4 @@
-# Topology Print Release
+# Topo2STL
 
 A reusable Codex skill for taking topology-optimized FDM structural parts from design-domain definition through BESO, printable reconstruction, independent FEA, slicing, and release evidence.
 
@@ -18,8 +18,8 @@ The skill is workflow guidance. It reuses the CAD, BESO, FEA, and slicer tools a
 ## Install
 
 ```bash
-git clone https://github.com/tefj-fun/topology-print-release-skill.git \
-  ~/.codex/skills/topology-print-release
+git clone https://github.com/tefj-fun/topo2stl.git \
+  ~/.codex/skills/topo2stl
 ```
 
 Restart Codex if the skill does not appear immediately.
@@ -27,7 +27,7 @@ Restart Codex if the skill does not appear immediately.
 ## Use
 
 ```text
-Use $topology-print-release to build or audit this topology-optimized printable part.
+Use $topo2stl to build or audit this topology-optimized printable part.
 ```
 
 Project-specific dimensions, loads, material calibration, printer settings, solver commands, and acceptance limits remain in the project being analyzed.

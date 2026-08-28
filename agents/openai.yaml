@@ -1,4 +1,4 @@
 interface:
-  display_name: "Topology Print Release"
+  display_name: "Topo2STL"
   short_description: "Validate BESO designs through printable release"
-  default_prompt: "Use $topology-print-release to build or audit this topology-optimized printable part."
+  default_prompt: "Use $topo2stl to build or audit this topology-optimized printable part."

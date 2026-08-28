@@ -1,9 +1,9 @@
 ---
-name: topology-print-release
+name: topo2stl
 description: Run or review topology-optimized FDM structural parts from design envelope and BESO through symmetry control, printable reconstruction, independent FEA, slicing, and release. Use for structural 3D-print topology workflows; do not invoke for ordinary CAD edits or slicer-only tuning.
 ---
 
-# Topology Print Release
+# Topo2STL
 
 Produce a versioned printable artifact with evidence that survives smoothing and slicing. Reuse project-local CAD, BESO, FEA, and slicer scripts before adding new tooling.
 
