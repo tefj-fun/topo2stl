@@ -10,6 +10,7 @@ A reusable Codex skill for taking topology-optimized FDM structural parts from d
 - Watertightness, connectivity, fit, tooling, and symmetry audits
 - Independent print-aware FEA of the final printable surface
 - Slicer and physical-test gates before declaring a release printable
+- Starting ranges and failure-driven tuning rules for BESO, meshing, reconstruction, interfaces, FEA, and slicing
 
 The skill is workflow guidance. It reuses the CAD, BESO, FEA, and slicer tools already present in each project rather than imposing a particular solver.
 
