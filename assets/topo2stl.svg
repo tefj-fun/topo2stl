@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Topo2STL</title>
+  <desc id="desc">Orange topology load path joining a base and vertical interface</desc>
+  <rect width="256" height="256" rx="48" fill="#111827"/>
+  <path d="M38 192h180v28H38zM184 38h34v182h-34z" fill="#f59e0b"/>
+  <path d="M50 188C78 120 109 91 184 62v38c-48 25-72 48-92 88z" fill="#f97316"/>
+  <circle cx="70" cy="188" r="18" fill="#111827" stroke="#fed7aa" stroke-width="9"/>
+  <circle cx="188" cy="75" r="18" fill="#111827" stroke="#fed7aa" stroke-width="9"/>
+</svg>

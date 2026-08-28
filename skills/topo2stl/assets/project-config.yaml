@@ -1,0 +1,78 @@
+schema_version: 1
+
+project:
+  name: example-camera-mount
+  revision: v1
+  units: mm-N-kg
+
+geometry:
+  design_domain: geometry/design-domain.step
+  protected_solids:
+    - geometry/mounting-interfaces.step
+  mandatory_voids:
+    - geometry/tool-access.step
+  final_stl: release/final.stl
+
+interfaces:
+  - id: robot-mount
+    type: restrained
+    fasteners: 4x M4
+  - id: camera-insert
+    type: loaded
+    fasteners: 1x 1/4-20 insert
+
+loading:
+  payload_mass_kg: 2.0
+  center_of_gravity_mm: [0.0, 0.0, -50.0]
+  safety_factor: 3.0
+  restraints:
+    - interface: robot-mount
+      model: distributed-bearing
+  cases:
+    - id: gravity-6g
+      force_n: [0.0, 0.0, -117.72]
+      moment_nm: [0.0, 0.0, 0.0]
+      application_region: camera-insert
+    - id: fore-aft-4g
+      force_n: [0.0, -78.48, 0.0]
+      moment_nm: [-3.924, 0.0, 0.0]
+      application_region: camera-insert
+
+material:
+  name: PLA
+  model: orthotropic-conservative
+  source: measured-or-documented
+  xy_tensile_strength_mpa: 35.0
+  z_tensile_strength_mpa: 18.0
+
+printer:
+  process: FDM
+  nozzle_mm: 0.4
+  line_width_mm: 0.45
+  layer_height_mm: 0.2
+  walls: 4
+  infill_percent: 30
+  orientation: primary-tension-in-XY
+
+optimization:
+  method: BESO
+  target_volume_fraction: 0.5
+  evolutionary_rate: 0.01
+  filter_radius_elements: 2.0
+  convergence_window: 15
+  symmetry: mirror-paired-elements
+
+reconstruction:
+  field_spacing_mm: 0.5
+  smoothing_sigma_voxels: 1.0
+  maximum_volume_error_percent: 0.5
+
+acceptance:
+  maximum_displacement_mm: 0.75
+  minimum_p99_directional_fos: 3.0
+  maximum_volume_error_percent: 0.5
+  require_single_component: true
+  require_watertight_stl: true
+  minimum_progress_images: 4
+
+evidence_manifest: release/evidence-manifest.json

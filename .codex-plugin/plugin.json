@@ -1,0 +1,47 @@
+{
+  "name": "topo2stl",
+  "version": "0.1.0",
+  "description": "Validated topology-optimization workflow from declared loads through printable STL evidence.",
+  "author": {
+    "name": "tefj-fun",
+    "email": "56264586+tefj-fun@users.noreply.github.com",
+    "url": "https://github.com/tefj-fun"
+  },
+  "homepage": "https://github.com/tefj-fun/topo2stl",
+  "repository": "https://github.com/tefj-fun/topo2stl",
+  "license": "MIT",
+  "keywords": [
+    "topology-optimization",
+    "beso",
+    "fea",
+    "3d-printing",
+    "stl"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Topo2STL",
+    "shortDescription": "Validate topology designs through printable STL release",
+    "longDescription": "Guides structural FDM parts from user-confirmed loads and protected interfaces through BESO, controlled reconstruction, independent print-aware FEA, slicing, and visual release evidence.",
+    "developerName": "tefj-fun",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/tefj-fun/topo2stl",
+    "defaultPrompt": [
+      "Build a validated printable topology from my loads.",
+      "Audit this topology-optimized STL for release.",
+      "Show the optimization and FEA evidence."
+    ],
+    "brandColor": "#C86B16",
+    "composerIcon": "./assets/topo2stl.svg",
+    "logo": "./assets/topo2stl.svg",
+    "screenshots": [
+      "./assets/readme/04-final-printable.png",
+      "./assets/readme/05-final-fea-hotspot.png",
+      "./assets/readme/06-slicer-preview.png"
+    ]
+  }
+}

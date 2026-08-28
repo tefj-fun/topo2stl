@@ -30,6 +30,12 @@ The rough third checkpoint is intentionally retained: it shows why smoothing, mi
 
 This example reports the load location, restraints, force distribution, displacement, peak hotspot and robust directional factor of safety in one reviewable image. A displayed hotspot image is supporting evidence, not a substitute for the mesh, solver inputs, convergence check, and full result files.
 
+### Actual sliced toolpath
+
+![Actual OrcaSlicer G-code preview with layer-height coloring](assets/readme/06-slicer-preview.png)
+
+This top-view toolpath was reconstructed from the generated G-code: 240 layers, 48.0 mm maximum height, 59.92 g PLA and a 1 h 46 m estimate. See the complete [camera-mount evidence example](examples/camera-mount/README.md).
+
 ## What it enforces
 
 - Real attachment loads and protected interfaces before optimization
@@ -46,12 +52,15 @@ The skill is workflow guidance. It reuses the CAD, BESO, FEA, and slicer tools a
 
 ## Install
 
+Recommended cross-agent installation:
+
 ```bash
-git clone https://github.com/tefj-fun/topo2stl.git \
-  ~/.codex/skills/topo2stl
+npx skills add tefj-fun/topo2stl --skill topo2stl -g -a codex
 ```
 
 Restart Codex if the skill does not appear immediately.
+
+The repository is also a skill-only Codex plugin: `.codex-plugin/plugin.json` exposes the skill under `skills/topo2stl/` with UI metadata and screenshots.
 
 ## Use
 
@@ -60,6 +69,24 @@ Use $topo2stl to build or audit this topology-optimized printable part.
 ```
 
 Project-specific dimensions, loads, material calibration, printer settings, solver commands, and acceptance limits remain in the project being analyzed.
+
+## Project and release contracts
+
+Copy the templates into the project being optimized:
+
+```bash
+cp skills/topo2stl/assets/project-config.yaml ./project-config.yaml
+cp skills/topo2stl/assets/evidence-manifest.json ./release/evidence-manifest.json
+```
+
+Confirm inputs before solving, then validate the final release:
+
+```bash
+python skills/topo2stl/scripts/preflight.py ./project-config.yaml
+python skills/topo2stl/scripts/validate-release.py ./release/evidence-manifest.json
+```
+
+Install the only Python dependency with `python -m pip install -r requirements.txt` when PyYAML is unavailable.
 
 ## Safety boundary
 

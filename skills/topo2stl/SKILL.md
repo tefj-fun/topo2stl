@@ -1,11 +1,16 @@
 ---
 name: topo2stl
 description: Run or review topology-optimized FDM structural parts from design envelope and BESO through symmetry control, printable reconstruction, independent FEA, slicing, and release. Use for structural 3D-print topology workflows; do not invoke for ordinary CAD edits or slicer-only tuning.
+license: MIT
+metadata:
+  compatibility: Requires project-local CAD, BESO, FEA, and slicer tooling; preflight and release validation require Python 3 and PyYAML.
 ---
 
 # Topo2STL
 
 Produce a versioned printable artifact with evidence that survives smoothing and slicing. Reuse project-local CAD, BESO, FEA, and slicer scripts before adding new tooling.
+
+Start a new project by copying [assets/project-config.yaml](assets/project-config.yaml). Run `scripts/preflight.py <project-config.yaml>` and show its load table to the user before solving. Copy [assets/evidence-manifest.json](assets/evidence-manifest.json) into the release folder and run `scripts/validate-release.py <evidence-manifest.json>` before calling an STL printable. The release validator checks required evidence paths, per-case hotspot coverage, acceptance metrics, STL triangle consistency, connectivity, watertight edges, degeneracy, bounds, and enclosed volume.
 
 ## Start from declared inputs
 

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "project_config": "../project-config.yaml",
+  "revision": "v1",
+  "artifacts": {
+    "final_stl": "final.stl",
+    "fea_results": "fea-results.json",
+    "slicer_output": "final.gcode"
+  },
+  "results": {
+    "maximum_displacement_mm": 0.7,
+    "minimum_p99_directional_fos": 3.5,
+    "volume_error_percent": 0.4
+  },
+  "visual_evidence": {
+    "load_map": "evidence/load-map.png",
+    "before": "evidence/full-density.png",
+    "after": "evidence/final-printable.png",
+    "optimization_progress": [
+      {"stage": "full-density", "path": "evidence/progress-100.png"},
+      {"stage": "early-removal", "path": "evidence/progress-80.png"},
+      {"stage": "load-paths", "path": "evidence/progress-60.png"},
+      {"stage": "converged", "path": "evidence/progress-final.png"}
+    ],
+    "fea_hotspots": [
+      {"load_case": "gravity-6g", "path": "evidence/fea-gravity-6g.png"},
+      {"load_case": "fore-aft-4g", "path": "evidence/fea-fore-aft-4g.png"}
+    ],
+    "slicer_preview": "evidence/slicer-preview.png"
+  }
+}
