@@ -30,7 +30,7 @@ The historical run did not retain exact 80%, 60%, and 40% iteration renders, so 
 - Maximum displacement: 0.70 mm
 - p99 directional factor of safety: 8.95
 - Peak hotspot: 192.1 MPa at the idealized fixed boundary; retained for inspection rather than used as the robust release metric
-- Slice: 240 layers, 48.0 mm maximum height, 59.92 g PLA, approximately 1 h 46 m
+- Supported slice: 0.20 mm profile, two walls, 15% crosshatch infill, build-plate-only normal supports, 38.27 g and approximately 2 h 13 min
 
 ![Actual sliced G-code toolpath](../../assets/readme/06-slicer-preview.png)
 

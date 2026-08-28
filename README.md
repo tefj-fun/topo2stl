@@ -36,9 +36,9 @@ This example reports the load location, restraints, force distribution, displace
 
 ### Actual sliced toolpath
 
-![Actual OrcaSlicer G-code preview with layer-height coloring](assets/readme/06-slicer-preview.png)
+![Three matching Final V14 OrcaSlicer layers showing walls, infill and support separately](assets/readme/06-slicer-preview.png)
 
-This top-view toolpath was reconstructed from the generated G-code: 240 layers, 48.0 mm maximum height, 59.92 g PLA and a 1 h 46 m estimate. See the complete [camera-mount evidence example](examples/camera-mount/README.md).
+These are three separate layers from a matching Final V14 re-slice, shown at one fixed scale rather than overlaid. The supported 0.20 mm profile uses two walls, 15% crosshatch infill and build-plate-only normal supports; its retained slice report estimates 38.27 g and 2 h 12 min 52 s. See the complete [camera-mount evidence example](examples/camera-mount/README.md).
 
 ## What it enforces
 

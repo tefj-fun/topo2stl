@@ -14,11 +14,13 @@
     "peak_hotspot_note": "Idealized fixed-boundary hotspot retained for inspection; not used as robust release metric."
   },
   "slicer": {
-    "source": "OrcaSlicer 2.4.2 G-code",
-    "layers": 240,
-    "maximum_height_mm": 48.0,
-    "filament_mass_g": 59.92,
-    "estimated_time": "1h 46m 22s"
+    "source": "Retained supported OrcaSlicer 0.20 mm profile report",
+    "walls": 2,
+    "infill_percent": 15,
+    "infill_pattern": "crosshatch",
+    "support": "normal auto, build plate only",
+    "filament_mass_g": 38.27,
+    "estimated_time": "2h 12m 52s"
   },
   "checkpoint_note": "Exact historical material-fraction iteration renders were not retained; images are labeled development checkpoints."
 }
