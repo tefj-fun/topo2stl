@@ -53,6 +53,7 @@ Stop on convergence and target volume, not merely an arbitrary iteration count.
 - Independent mesh node/tetrahedron counts
 - Per-case displacement and directional factor of safety
 - Slicer printer/nozzle/material, walls, infill, support, layer height, estimated mass, and time
+- Visual evidence listed in `visual-evidence.md`, displayed to the user rather than only written to disk
 
 Peak stress at an ideal fixed boundary may be a mesh singularity. Use the declared robust release metric, but retain the peak for inspection.
 

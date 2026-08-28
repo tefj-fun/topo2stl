@@ -42,8 +42,9 @@ Show the resulting load table to the user before solving. Do not substitute an a
 7. Require one connected watertight body, correct interfaces, clear tooling paths, and a quantitative symmetry audit when applicable.
 8. Independently remesh the final printable surface and rerun print-aware FEA. Do not reuse optimization stresses as release evidence.
 9. Slice using the declared printer configuration and inspect supports, holes, time, material, and build orientation.
-10. Keep physical printing and printer motion separate from artifact generation. Upload or start only when the user explicitly asks, after checking live printer state.
+10. Show the user the visual evidence set: load map, full-density design, optimization checkpoints, final BESO result, reconstructed printable body, before/after comparison, FEA hotspots, and sliced preview.
+11. Keep physical printing and printer motion separate from artifact generation. Upload or start only when the user explicitly asks, after checking live printer state.
 
 Do not call an STL printable when any required gate fails. Preserve earlier verified releases and write a new version instead of overwriting them.
 
-For the detailed flow and evidence checklist, read [references/pipeline.md](references/pipeline.md). When selecting or changing optimization, reconstruction, mesh, or print parameters, also read [references/parameter-tuning.md](references/parameter-tuning.md).
+For the detailed flow and evidence checklist, read [references/pipeline.md](references/pipeline.md). When selecting or changing optimization, reconstruction, mesh, or print parameters, also read [references/parameter-tuning.md](references/parameter-tuning.md). For required renders, plots, screenshots, and physical-print photos, read [references/visual-evidence.md](references/visual-evidence.md).
